@@ -18,7 +18,7 @@ export default function Home() {
       <IntroSection />
       <AboutSection />
       <MyProjects />
-      <TechStack />
+      {/* <TechStack /> */}
       <ConnectSection />
     </div>
   );

@@ -18,8 +18,12 @@ export default function IntroSection() {
             responsive web apps using React and Node.js.
           </h1>
           <div className="flex gap-3">
-            <Button className="bg-white text-black">Download CV</Button>
-            <Button className="bg-white text-black">Contact Me</Button>
+            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl">
+              Download CV
+            </Button>
+            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl">
+              Contact Me
+            </Button>
           </div>
         </div>
         <div>
