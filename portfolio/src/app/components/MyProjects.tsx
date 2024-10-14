@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function MyProjects() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
       <div className="mx-auto container grid grid-cols-3 ">
         <div className="col-span-2 flex justify-center items-center">

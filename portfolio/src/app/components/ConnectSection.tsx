@@ -12,8 +12,7 @@ import { Mail } from "lucide-react";
 export default function ConnectSection() {
   const handleFormSubmit = () => {};
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-      {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       <div className="mx-auto container grid grid-cols-3 ">
         <div className="col-span-2 px-20 space-y-10 flex flex-col  items-center">
           <h1 className="text-4xl text-transparent duration-1000 bg-white animate-title cursor-default text-edge-outline font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text ">
@@ -35,10 +34,9 @@ export default function ConnectSection() {
             <InstagramLogoIcon className="w-[48px] h-[48px]" />
           </div>
         </div>
-        {/* <div className="col-span-1 flex flex-col items-center space-y-5 text-white"> */}
         <form
           onSubmit={handleFormSubmit}
-          className="space-y-5 flex flex-col items-center"
+          className="space-y-5 flex flex-col items-center text-white"
         >
           <Input
             placeholder="Your Name"
@@ -57,19 +55,11 @@ export default function ConnectSection() {
             className="min-h-[200px] w-full"
             required
           />
-          <Button
-            className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl w-1/2"
-            // onClick={() => {
-            // Handle form submission here
-            // }}
-          >
+          <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl w-1/2">
             Submit
           </Button>
         </form>
-        {/* </div> */}
       </div>
-
-      {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
     </div>
   );
 }

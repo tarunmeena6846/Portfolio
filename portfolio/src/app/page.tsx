@@ -9,11 +9,8 @@ import Particles from "./components/particles";
 
 export default function Home() {
   return (
-    <div className="relative w-full h-full">
-      {/* Particles as a background for all sections */}
-      <Particles className="fixed inset-0 -z-10 animate-fade-in" />
+    <div>
       <Sidebar />
-      {/* Content sections */}
       <Hero />
       <IntroSection />
       <AboutSection />
