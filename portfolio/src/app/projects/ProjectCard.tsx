@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function projectCard({ data, index }) {
   return (
     <>
-      {/* {activeCategory == project.category && ( */}
       <Link href={"projects/"} key={index}>
         <motion.div
           className="z-10 relative flex justify-center items-start flex-col mb-5 md:px-10 w-full h-auto bg-gray-100 group/tes py-20 px-5 md:py-2 aspect-video "
@@ -51,7 +50,6 @@ export default function projectCard({ data, index }) {
           </div>
         </motion.div>
       </Link>
-      {/* )} */}
     </>
   );
 }

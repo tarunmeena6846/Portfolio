@@ -1,14 +1,14 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+
+import { Button } from "@/src/components/ui/button";
 import { useRouter } from "next/navigation";
 
 export default function AboutSection() {
   const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-      <div className="mx-auto container grid grid-cols-3 ">
-        <div className="col-span-1 px-20 space-y-10 flex flex-col justify-center">
+      <div className="mx-auto container grid grid-cols-2 ">
+        <div className="col-span-1 px-20 space-y-10 flex flex-col justify-center items-center">
           <h1 className="text-4xl text-transparent duration-1000 bg-white animate-title cursor-default text-edge-outline font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text ">
             About me
           </h1>
@@ -22,8 +22,8 @@ export default function AboutSection() {
             Learn More
           </Button>
         </div>
-        <div className="col-span-2 flex justify-center items-center">
-          <img src="./aboutSection.svg" className="h-[80%] " />
+        <div className="col-span-1 flex justify-center items-center">
+          <img src="./aboutSection.svg" className="h-[80%] w-[80%]" />
         </div>
       </div>
     </div>

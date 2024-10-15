@@ -9,11 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
-      >
+      <body className="bg-black">
         <div className="relative w-full h-full">
           <Particles />
           <div className="relative z-10">{children}</div>

@@ -12,11 +12,18 @@ export default function Home() {
     <div>
       <Sidebar />
       <Hero />
-      <IntroSection />
-      <AboutSection />
-      <MyProjects />
-      {/* <TechStack /> */}
-      <ConnectSection />
+      <div id="intro">
+        <IntroSection />
+      </div>
+      <div id="about">
+        <AboutSection />
+      </div>
+      <div id="projects">
+        <MyProjects />
+      </div>
+      <div id="contact">
+        <ConnectSection />
+      </div>
     </div>
   );
 }

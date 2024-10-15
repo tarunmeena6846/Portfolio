@@ -46,7 +46,7 @@ const projects = [
     bg: Trivia,
   },
 ];
-console.log(Trivia);
+// console.log(Trivia);
 export default function ProjectsDisplay() {
   return (
     <div className=" my-10">

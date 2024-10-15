@@ -10,3 +10,21 @@
     --radius: 0.5rem;
   }
 }
+
+/* Add this to your global styles (e.g., globals.css) */
+.underline-icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px; /* Adjust distance from the icon */
+  height: 2px; /* Adjust thickness */
+  background-color: black; /* Adjust color */
+  width: 100%; /* Full width */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease;
+}
+
+.underline-icon:focus-visible:after {
+  transform: scaleX(1); /* Show underline on focus */
+}
