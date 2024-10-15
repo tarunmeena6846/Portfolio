@@ -2,6 +2,7 @@
 import { Button } from "@/src/components/ui/button";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Hr from "./Hr";
 
 export default function MyProjects() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function MyProjects() {
           }}
         >
           <motion.h1
-            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-6xl bg-clip-text"
+            className="text-4xl text-transparent bg-white cursor-default sm:text-8xl  bg-clip-text"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -38,9 +39,10 @@ export default function MyProjects() {
             }}
           >
             My Projects
+            <Hr />
           </motion.h1>
           <motion.p
-            className="text-gray-400 text-lg"
+            className="text-gray-400 text-2xl"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -60,7 +62,7 @@ export default function MyProjects() {
             }}
           >
             <Button
-              className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl"
+              className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl"
               onClick={() => router.push("/projects")}
             >
               Learn More

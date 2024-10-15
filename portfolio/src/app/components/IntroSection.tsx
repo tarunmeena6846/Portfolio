@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 export default function IntroSection() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
-      <div className="mx-auto container grid grid-cols-2 w-full">
+      <div className="mx-auto container grid grid-cols-3 w-full">
         <motion.div
-          className="col-span-1 mx-auto px-20 space-y-10 flex flex-col justify-center ml-10"
+          className="col-span-2 mx-auto px-20 space-y-10 flex flex-col justify-center ml-10"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -14,7 +14,7 @@ export default function IntroSection() {
           }}
         >
           <motion.h3
-            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-6xl bg-clip-text text-gray-400"
+            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-7xl bg-clip-text text-gray-400"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -25,7 +25,7 @@ export default function IntroSection() {
             Tarun Meena
           </motion.h3>
           <motion.h1
-            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-6xl bg-clip-text"
+            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-8xl bg-clip-text"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -36,7 +36,7 @@ export default function IntroSection() {
             Full Stack Developer
           </motion.h1>
           <motion.p
-            className="text-gray-400 text-lg"
+            className="text-gray-400 text-2xl"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -56,10 +56,10 @@ export default function IntroSection() {
               type: "spring",
             }}
           >
-            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl">
+            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl">
               Download CV
             </Button>
-            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl">
+            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl">
               Contact Me
             </Button>
           </motion.div>
@@ -75,7 +75,7 @@ export default function IntroSection() {
         >
           <img
             src="./photo.jpeg"
-            className="rounded-full filter grayscale hover:blur-0 hover:grayscale-0 transition-all ease duration-500 h-[60%]"
+            className="rounded-full filter grayscale hover:blur-0 hover:grayscale-0 transition-all ease duration-500 h-[80%]"
           ></img>
         </motion.div>
       </div>

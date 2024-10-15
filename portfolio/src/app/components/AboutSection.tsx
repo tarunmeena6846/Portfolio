@@ -3,6 +3,7 @@
 import { Button } from "@/src/components/ui/button";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Hr from "./Hr";
 export default function AboutSection() {
   const router = useRouter();
   return (
@@ -16,8 +17,9 @@ export default function AboutSection() {
             type: "spring",
           }}
         >
+          {/* <div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5"> */}
           <motion.h1
-            className="text-4xl text-transparent bg-white  cursor-default font-display sm:text-6xl bg-clip-text "
+            className="text-4xl text-transparent bg-white  cursor-default font-display sm:text-9xl bg-clip-text "
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -26,9 +28,11 @@ export default function AboutSection() {
             }}
           >
             About me
+            <Hr />
           </motion.h1>
+
           <motion.h1
-            className=" text-zinc-400 text-lg animate-fade-up"
+            className=" text-zinc-400 text-2xl animate-fade-up"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -47,12 +51,13 @@ export default function AboutSection() {
             }}
           >
             <Button
-              className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl"
+              className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl"
               onClick={() => router.push("/about")}
             >
               Learn More
             </Button>
           </motion.div>
+          {/* </div> */}
         </motion.div>
         <motion.div
           className="col-span-1 flex justify-center items-center"

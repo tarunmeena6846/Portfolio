@@ -9,15 +9,16 @@ import {
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import { Mail } from "lucide-react";
+import Hr from "./Hr";
 
 export default function ConnectSection() {
   const handleFormSubmit = () => {};
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       <div className="mx-auto container grid grid-cols-2 ">
-        <motion.div className="col-span-1 px-20 space-y-10 flex flex-col  items-center">
+        <motion.div className="col-span-1 pl-20 space-y-10 flex flex-col ">
           <motion.h3
-            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-6xl bg-clip-text text-gray-400"
+            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-8xl bg-clip-text text-gray-400"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -26,10 +27,11 @@ export default function ConnectSection() {
             }}
           >
             Let's Connect
+            <Hr />
           </motion.h3>
 
           <motion.p
-            className="text-gray-400 text-lg"
+            className="text-gray-400 text-2xl"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -41,7 +43,7 @@ export default function ConnectSection() {
             say hi.
           </motion.p>
           <motion.p
-            className="text-center text-zinc-400"
+            className="text-center text-zinc-400 text-2xl"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -53,7 +55,7 @@ export default function ConnectSection() {
           </motion.p>
 
           <motion.div
-            className="text-white flex flex-row space-x-4 "
+            className="text-white flex flex-row justify-center items-center space-x-4 "
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
