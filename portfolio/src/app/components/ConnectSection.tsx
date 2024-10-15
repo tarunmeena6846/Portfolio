@@ -2,7 +2,7 @@
 import { Button } from "@/src/components/ui/button";
 import { Input } from "@/src/components/ui/input";
 import { Textarea } from "@/src/components/ui/textarea";
-
+import { motion } from "framer-motion";
 import {
   GitHubLogoIcon,
   InstagramLogoIcon,
@@ -15,20 +15,52 @@ export default function ConnectSection() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       <div className="mx-auto container grid grid-cols-2 ">
-        <div className="col-span-1 px-20 space-y-10 flex flex-col  items-center">
-          <h1 className="text-4xl text-transparent duration-1000 bg-white animate-title cursor-default text-edge-outline font-display sm:text-6xl md:text-7xl whitespace-nowrap bg-clip-text ">
+        <motion.div className="col-span-1 px-20 space-y-10 flex flex-col  items-center">
+          <motion.h3
+            className="text-4xl text-transparent bg-white cursor-default sm:text-4xl md:text-6xl bg-clip-text text-gray-400"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              type: "spring",
+            }}
+          >
             Let's Connect
-          </h1>
-          <div>
-            <p className="text-zinc-400 animate-fade-up">
-              Feel free to contact me if you have any questions or just want to
-              say hi.
-            </p>
-            <p className="text-center text-zinc-400 animate-fade-up">
-              tarunmeena6846@gmail.com
-            </p>
-          </div>
-          <div className="text-white flex flex-row space-x-4 ">
+          </motion.h3>
+
+          <motion.p
+            className="text-gray-400 text-lg"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.2,
+              type: "spring",
+            }}
+          >
+            Feel free to contact me if you have any questions or just want to
+            say hi.
+          </motion.p>
+          <motion.p
+            className="text-center text-zinc-400"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.3,
+              type: "spring",
+            }}
+          >
+            tarunmeena6846@gmail.com
+          </motion.p>
+
+          <motion.div
+            className="text-white flex flex-row space-x-4 "
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.4,
+              type: "spring",
+            }}
+          >
             <Mail
               className="w-[48px] h-[48px] cursor-pointer"
               onClick={() => window.open("mailto:tarunmeena6846@gmail.com")}
@@ -57,9 +89,17 @@ export default function ConnectSection() {
             >
               <InstagramLogoIcon className="w-[48px] h-[48px] cursor-pointer" />
             </a>
-          </div>
-        </div>
-        <div className="px-20 ">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className="px-20 "
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.5,
+            type: "spring",
+          }}
+        >
           <form
             onSubmit={handleFormSubmit}
             className="space-y-5 flex flex-col items-center shadow-lg backdrop-blur-lg border p-10 rounded-3xl"
@@ -85,7 +125,7 @@ export default function ConnectSection() {
               Submit
             </Button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

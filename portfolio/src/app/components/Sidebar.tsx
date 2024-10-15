@@ -9,7 +9,6 @@ export default function Sidebar() {
         <Link to="intro" spy={true} smooth={true} duration={500}>
           <Home
             className="w-[48px] h-[48px] text-black focus:outline-none"
-            // tabIndex={0}
           />
         </Link>
         <span className="absolute left-0 right-0 bottom-[-6px] h-[2px] bg-black scale-x-0 group-focus-within:scale-x-100 transition-transform"></span>
@@ -25,7 +24,7 @@ export default function Sidebar() {
       <div className="relative group">
         <Link to="projects" spy={true} smooth={true} duration={500}>
           <Folder className="w-[48px] h-[48px] text-black" />
-        </Link>
+        </Link> 
         <span className="absolute left-0 right-0 bottom-[-6px] h-[2px] bg-black scale-x-0 group-focus-within:scale-x-100 transition-transform"></span>
       </div>
 

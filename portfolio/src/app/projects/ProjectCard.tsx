@@ -20,8 +20,6 @@ export default function projectCard({ data, index }) {
             type: "spring",
           }}
         >
-          {" "}
-          {/* Add relative here */}
           <Image
             src={data.bg}
             alt="Alvalens"
