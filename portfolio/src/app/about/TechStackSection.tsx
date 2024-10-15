@@ -1,4 +1,5 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/src/components/ui/separator";
+
 const languagesFrameworks = [
   "HTML",
   "CSS",

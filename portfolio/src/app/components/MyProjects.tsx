@@ -1,6 +1,9 @@
+"use client";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function MyProjects() {
+  const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
@@ -15,7 +18,10 @@ export default function MyProjects() {
           <p className=" text-zinc-400 animate-fade-up">
             These are some of the projects that I have done.
           </p>
-          <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl w-1/2">
+          <Button
+            className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl w-1/2"
+            onClick={() => router.push("/projects")}
+          >
             Learn More
           </Button>
         </div>
