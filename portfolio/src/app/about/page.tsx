@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 
 import { SkillSection } from "./SkillsSection";
 import TechStackSection from "./TechStackSection";
+import ProfessionalExperiance from "./ProfessionalExperiance";
 export default function AboutPage() {
   return (
     <>

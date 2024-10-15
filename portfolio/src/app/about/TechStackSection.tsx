@@ -16,12 +16,20 @@ const languagesFrameworks = [
   "AWS",
   "Kafka",
   "Protobuf",
+  "Shell Script",
 ];
 
-const tools = ["Visual Studio Code", "Git", "GitHub", "Docker", "Jira"];
+const tools = [
+  "Visual Studio Code",
+  "Git",
+  "GitHub",
+  "Docker",
+  "Jira",
+  "Valgrind",
+];
 export default function TechStackSection() {
   return (
-    <div className="grid grid-cols-2 text-white mt-20 mx-auto w-screen p-10 gap-10">
+    <div className="grid grid-cols-2 text-white mt-20 mx-auto w-screen p-10 gap-10  h-[60vh]">
       <div className="col-span-1 flex flex-col justify-start items-center">
         <h2 className="text-3xl mb-4 text-gray-400">Languages & Frameworks</h2>
         <Languages />
