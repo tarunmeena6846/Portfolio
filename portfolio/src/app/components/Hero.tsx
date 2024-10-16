@@ -14,6 +14,7 @@ export default function Hero({
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
+
   return (
     <>
       <div className="flex flex-col items-center justify-center w-screen min-h-screen">

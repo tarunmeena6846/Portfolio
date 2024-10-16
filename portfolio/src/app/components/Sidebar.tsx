@@ -4,6 +4,7 @@ import { RefObject } from "react";
 
 export default function Sidebar({
   scrollToSection,
+  activeSection,
 }: {
   scrollToSection: {
     introRef: RefObject<HTMLDivElement>;
@@ -11,6 +12,7 @@ export default function Sidebar({
     projectsRef: RefObject<HTMLDivElement>;
     contactRef: RefObject<HTMLDivElement>;
   };
+  activeSection: String;
 }) {
   const { introRef, aboutRef, projectsRef, contactRef } = scrollToSection;
 
@@ -25,7 +27,9 @@ export default function Sidebar({
         <button onClick={() => scrollTo(introRef)}>
           <Home className="w-[48px] h-[48px] text-black focus:outline-none" />
         </button>
-        <span className="absolute left-0 right-0 bottom-[-6px] h-[2px] bg-black scale-x-0 group-focus-within:scale-x-100 transition-transform"></span>
+        {activeSection === "intro" && (
+          <span className="absolute left-0 right-0 bottom-[-6px] h-[2px] bg-black scale-x-0 group-focus-within:scale-x-100 transition-transform"></span>
+        )}
       </div>
 
       <div className="relative group">

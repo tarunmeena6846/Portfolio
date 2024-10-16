@@ -1,5 +1,5 @@
 import { Separator } from "@/src/components/ui/separator";
-
+import { motion } from "framer-motion";
 const languagesFrameworks = [
   "HTML",
   "CSS",
@@ -31,15 +31,31 @@ const tools = [
 export default function TechStackSection() {
   return (
     <div className="grid grid-cols-2 text-white mt-20 mx-auto w-screen p-10 gap-10  h-[60vh]">
-      <div className="col-span-1 flex flex-col justify-start items-center">
+      <motion.div
+        className="col-span-1 flex flex-col justify-start items-center"
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.7,
+          type: "spring",
+        }}
+      >
         <h2 className="text-3xl mb-4 text-gray-400">Languages & Frameworks</h2>
         <Languages />
-      </div>
+      </motion.div>
       {/* <Separator orientation="vertical" /> */}
-      <div className="col-span-1 flex flex-col justify-start items-center">
+      <motion.div
+        className="col-span-1 flex flex-col justify-start items-center"
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.7,
+          type: "spring",
+        }}
+      >
         <h2 className="text-3xl mb-4 text-gray-400">Tools</h2>
         <Tools />
-      </div>
+      </motion.div>
     </div>
   );
 }

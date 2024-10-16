@@ -1,3 +1,5 @@
+import Hr from "../components/Hr";
+import { motion } from "framer-motion";
 // components/JobCard.tsx
 interface JobCardProps {
   year: string;
@@ -89,14 +91,31 @@ export default function ProfessionalExperience() {
   return (
     <div className=" w-screen my-10">
       {/* Title Section */}
-      <div className="flex flex-col items-center  w-screen p-10">
-        <h1 className="text-4xl text-transparent duration-1000 bg-white animate-title cursor-default text-edge-outline font-display sm:text-6xl md:text-6xl whitespace-nowrap bg-clip-text">
+      <motion.div
+        className="flex flex-col items-center  w-screen p-10"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.7,
+          type: "spring",
+        }}
+      >
+        <Hr />
+        <h1 className="text-4xl text-transparent bg-white sm:text-6xl md:text-6xl bg-clip-text">
           Professional Experience
         </h1>
-      </div>
+      </motion.div>
 
       {/* Job Cards */}
-      <div className="relative after:absolute after:inset-y-2 after:w-1 after:bg-white after:left-[-4px] md:after:left-1 lg:after:left-2 xl:after:left-3 grid gap-8 md:gap-12 pl-16 md:px-8 text-white  ml-10">
+      <motion.div
+        className="relative after:absolute after:inset-y-2 after:w-1 after:bg-white after:left-[-4px] md:after:left-1 lg:after:left-2 xl:after:left-3 grid gap-8 md:gap-12 pl-16 md:px-8 text-white  ml-10"
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          delay: 0.7,
+          type: "spring",
+        }}
+      >
         {jobs.map((job, index) => (
           <JobCard
             key={index}
@@ -107,7 +126,7 @@ export default function ProfessionalExperience() {
             technologies={job.technologies}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

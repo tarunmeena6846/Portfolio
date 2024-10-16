@@ -2,6 +2,7 @@
 import { Button } from "@/src/components/ui/button";
 import { motion } from "framer-motion";
 export default function IntroSection() {
+  
   return (
     <div className="flex flex-col items-center justify-center w-screen min-h-screen overflow-hidden ">
       <div className="mx-auto container grid grid-cols-3 w-full">
