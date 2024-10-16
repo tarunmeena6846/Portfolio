@@ -1,10 +1,9 @@
 "use client";
 import { Button } from "@/src/components/ui/button";
-import Particles from "./particles";
 
 import { Link } from "react-scroll";
-import { ArrowDownCircle } from "lucide-react";
-
+import { ArrowBigDown, ArrowBigDownIcon, ArrowDownCircle } from "lucide-react";
+import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
@@ -14,11 +13,18 @@ export default function Hero() {
           Welcome
         </h1>
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-        <Link to="intro" spy={true} smooth={true} duration={500}>
-          <Button className="mt-20 rounded-full p-10">
-            {/* <ArrowDownCircle className="bg-white text-white p-6 mt-80" /> */}
-          </Button>
-        </Link>
+        <motion.button
+          animate={{ y: [0, 20, 0] }}
+          transition={{
+            repeat: Infinity,
+            duration: 4, // Total duration of one cycle
+            ease: "easeInOut",
+          }}
+        >
+          <Link to="intro" spy={true} smooth={true} duration={500}>
+            <ArrowBigDownIcon className="w-10 h-10 text-white mt-40" />
+          </Link>
+        </motion.button>
       </div>
     </>
   );

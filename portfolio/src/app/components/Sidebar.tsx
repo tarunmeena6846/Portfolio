@@ -7,9 +7,7 @@ export default function Sidebar() {
     <div className="hidden md:block fixed top-1/2 -translate-y-1/2 text-white space-y-10 bg-white py-10 px-4 rounded-e-xl">
       <div className="relative group">
         <Link to="intro" spy={true} smooth={true} duration={500}>
-          <Home
-            className="w-[48px] h-[48px] text-black focus:outline-none"
-          />
+          <Home className="w-[48px] h-[48px] text-black focus:outline-none" />
         </Link>
         <span className="absolute left-0 right-0 bottom-[-6px] h-[2px] bg-black scale-x-0 group-focus-within:scale-x-100 transition-transform"></span>
       </div>
@@ -24,7 +22,7 @@ export default function Sidebar() {
       <div className="relative group">
         <Link to="projects" spy={true} smooth={true} duration={500}>
           <Folder className="w-[48px] h-[48px] text-black" />
-        </Link> 
+        </Link>
         <span className="absolute left-0 right-0 bottom-[-6px] h-[2px] bg-black scale-x-0 group-focus-within:scale-x-100 transition-transform"></span>
       </div>
 

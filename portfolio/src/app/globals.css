@@ -28,3 +28,31 @@
 .underline-icon:focus-visible:after {
   transform: scaleX(1); /* Show underline on focus */
 }
+
+:root {
+  --vh: 1vh;
+}
+
+.scroll-snap-container {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll-snap-sections {
+  height: 100%;
+}
+
+.scroll-snap-section {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media (max-width: 768px) {
+  .scroll-snap-container {
+    scroll-snap-type: y proximity;
+  }
+}
