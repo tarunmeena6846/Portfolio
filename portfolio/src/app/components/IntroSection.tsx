@@ -3,7 +3,7 @@ import { Button } from "@/src/components/ui/button";
 import { motion } from "framer-motion";
 export default function IntroSection() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
+    <div className="flex flex-col items-center justify-center w-screen min-h-screen overflow-hidden ">
       <div className="mx-auto container grid grid-cols-3 w-full">
         <motion.div
           className="col-span-2 mx-auto px-20 space-y-10 flex flex-col justify-center ml-10"

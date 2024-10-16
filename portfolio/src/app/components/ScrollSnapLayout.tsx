@@ -10,6 +10,7 @@ export default function ScrollSnapLayout({
   useEffect(() => {
     const setVh = () => {
       const vh = window.innerHeight * 0.01;
+      console.log("vindow height", vh);
       document.documentElement.style.setProperty("--vh", `${vh}px`);
     };
 

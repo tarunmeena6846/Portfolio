@@ -10,12 +10,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black">
-        <div className="relative w-full h-full">
-          <Particles />
-          <ScrollSnapLayout>
+        <ScrollSnapLayout>
+          <div className="relative w-full h-full">
+            <Particles />
             <div className="relative z-10">{children}</div>
-          </ScrollSnapLayout>
-        </div>
+          </div>
+        </ScrollSnapLayout>
       </body>
     </html>
   );
