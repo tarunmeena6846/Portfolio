@@ -14,10 +14,8 @@ export default function Home() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
-  const heroRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
   const activeSection = useScrollSpy([
-    // heroRef,
     introRef,
     aboutRef,
     projectsRef,

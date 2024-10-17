@@ -57,7 +57,7 @@ export default function Index() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="h-screen w-screen flex items-center justify-center fixed z-[99] bg-[#141516]"
+      className="h-screen w-screen flex items-center justify-center fixed z-[99] bg-white"
     >
       {dimension.width > 0 && (
         <>
@@ -67,15 +67,16 @@ export default function Index() {
             animate="enter"
             className="flex text-white text-[42px] items-center absolute z-[1]"
           >
-            <span className="block w-[10px] h-[10px] bg-white rounded-full mr-[10px]"></span>
-            {words[index]}
+            <span className="block w-[10px] h-[10px] bg-black rounded-full mr-[10px]"></span>
+            <p className="text-black">{words[index]}</p>
           </motion.p>
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">
             <motion.path
               variants={curve}
               initial="initial"
               exit="exit"
-              className="fill-[#141516]"
+              // className="fill-[#141516]"
+              className="fill-white"
             />
           </svg>
         </>
