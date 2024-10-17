@@ -75,7 +75,6 @@ export default function Index() {
               variants={curve}
               initial="initial"
               exit="exit"
-              // className="fill-[#141516]"
               className="fill-white"
             />
           </svg>

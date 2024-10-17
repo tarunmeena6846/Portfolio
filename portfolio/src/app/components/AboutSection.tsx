@@ -4,6 +4,7 @@ import { Button } from "@/src/components/ui/button";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Hr from "./Hr";
+import { MagneticButtons } from "./MagneticButtons";
 export default function AboutSection() {
   const router = useRouter();
   return (
@@ -50,12 +51,14 @@ export default function AboutSection() {
               type: "spring",
             }}
           >
-            <Button
-              className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl"
-              onClick={() => router.push("/about")}
-            >
-              Learn More
-            </Button>
+            <MagneticButtons>
+              <Button
+                className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl"
+                onClick={() => router.push("/about")}
+              >
+                Learn More
+              </Button>
+            </MagneticButtons>
           </motion.div>
           {/* </div> */}
         </motion.div>

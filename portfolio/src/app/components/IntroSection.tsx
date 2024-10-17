@@ -1,8 +1,8 @@
 "use client";
 import { Button } from "@/src/components/ui/button";
 import { motion } from "framer-motion";
+import { MagneticButtons } from "./MagneticButtons";
 export default function IntroSection() {
-  
   return (
     <div className="flex flex-col items-center justify-center w-screen min-h-screen overflow-hidden ">
       <div className="mx-auto container grid grid-cols-3 w-full">
@@ -57,12 +57,16 @@ export default function IntroSection() {
               type: "spring",
             }}
           >
-            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl">
-              Download CV
-            </Button>
-            <Button className="bg-white text-black hover:bg-gray-700 hover:text-white px-10 py-7 rounded-3xl text-xl">
-              Contact Me
-            </Button>
+            <MagneticButtons>
+              <Button className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl">
+                Download CV
+              </Button>
+            </MagneticButtons>
+            <MagneticButtons>
+              <Button className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl">
+                Contact Me
+              </Button>
+            </MagneticButtons>
           </motion.div>
         </motion.div>
         <motion.div
