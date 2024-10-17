@@ -5,7 +5,6 @@ import { MagneticButtons } from "./MagneticButtons";
 
 export default function Sidebar({
   scrollToSection,
-  activeSection,
 }: {
   scrollToSection: {
     introRef: RefObject<HTMLDivElement>;
@@ -13,7 +12,6 @@ export default function Sidebar({
     projectsRef: RefObject<HTMLDivElement>;
     contactRef: RefObject<HTMLDivElement>;
   };
-  activeSection: String;
 }) {
   const { introRef, aboutRef, projectsRef, contactRef } = scrollToSection;
 

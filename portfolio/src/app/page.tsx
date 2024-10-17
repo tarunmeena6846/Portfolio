@@ -6,7 +6,6 @@ import Hero from "./components/Preloader/Hero";
 import IntroSection from "./components/IntroSection";
 import MyProjects from "./components/MyProjects";
 import Sidebar from "./components/Sidebar";
-import { useScrollSpy } from "./hooks/useScrollSpy";
 import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -15,12 +14,7 @@ export default function Home() {
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
-  const activeSection = useScrollSpy([
-    introRef,
-    aboutRef,
-    projectsRef,
-    contactRef,
-  ]);
+  
 
   useEffect(() => {
     (async () => {
@@ -42,7 +36,6 @@ export default function Home() {
             projectsRef,
             contactRef,
           }}
-          activeSection={activeSection}
         />
         <div className="scroll-snap-sections">
           <div ref={introRef} className="scroll-snap-section" id="intro">

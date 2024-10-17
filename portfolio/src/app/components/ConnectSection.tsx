@@ -3,12 +3,6 @@ import { Button } from "@/src/components/ui/button";
 import { Input } from "@/src/components/ui/input";
 import { Textarea } from "@/src/components/ui/textarea";
 import { motion } from "framer-motion";
-import {
-  GitHubLogoIcon,
-  InstagramLogoIcon,
-  LinkedInLogoIcon,
-} from "@radix-ui/react-icons";
-import { Mail } from "lucide-react";
 import Hr from "./Hr";
 import { MagneticButtons } from "./MagneticButtons";
 
