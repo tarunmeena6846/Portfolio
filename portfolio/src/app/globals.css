@@ -10,7 +10,9 @@
     --radius: 0.5rem;
   }
 }
-
+body {
+  cursor: wait;
+}
 /* Add this to your global styles (e.g., globals.css) */
 .underline-icon:after {
   content: "";
