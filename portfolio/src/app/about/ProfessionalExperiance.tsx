@@ -89,7 +89,7 @@ export default function ProfessionalExperience() {
   ];
 
   return (
-    <div className=" w-screen my-10">
+    <div className=" w-screen my-10 pb-20">
       {/* Title Section */}
       <motion.div
         className="flex flex-col items-center  w-screen p-10"

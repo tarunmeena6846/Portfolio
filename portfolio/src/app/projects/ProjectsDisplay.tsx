@@ -77,7 +77,13 @@ export default function ProjectsDisplay() {
       </div>
       <div className="flex justify-center">
         <Button className="bg-white text-black hover:bg-gray-700 hover:text-white">
-          See more
+          <a
+            href="https://github.com/tarunmeena6846"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See more
+          </a>
         </Button>
       </div>
     </div>

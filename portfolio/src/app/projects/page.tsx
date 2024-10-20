@@ -9,6 +9,7 @@ import { useLoading } from "../components/context/LoadingContext";
 import { usePathname } from "next/navigation";
 import Hero from "../components/Preloader/Hero";
 import { useEffect, useState } from "react";
+import { ArrowBigDown } from "lucide-react";
 export default function ProjectsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -54,7 +55,7 @@ export default function ProjectsPage() {
               My Projects
               <Hr />
             </h1>
-            <p className=" text-zinc-400 animate-fade-up">
+            <p className=" text-zinc-400 animate-fade-up text-xl">
               These are some of the projects that I have done.
             </p>
             <MagneticButtons>
@@ -62,7 +63,8 @@ export default function ProjectsPage() {
                 className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl"
                 // onClick={() => router.push("/projects")}
               >
-                Scroll Down
+                {/* Scroll Down */}
+                <ArrowBigDown></ArrowBigDown>
               </Button>
             </MagneticButtons>
           </motion.div>

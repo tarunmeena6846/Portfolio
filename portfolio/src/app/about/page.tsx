@@ -6,14 +6,15 @@ import ProfessionalExperiance from "./ProfessionalExperiance";
 import { AnimatePresence, motion } from "framer-motion";
 import Hr from "../components/Hr";
 import { MagneticButtons } from "../components/MagneticButtons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Hero from "../components/Preloader/Hero";
 import { usePathname } from "next/navigation";
 import { useLoading } from "../components/context/LoadingContext";
+import { ArrowBigDown } from "lucide-react";
 
 export default function AboutPage() {
   const [isLoading, setIsLoading] = useState(true);
-
+  const skillRef = useRef(null);
   const pathname = usePathname();
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -83,8 +84,13 @@ export default function AboutPage() {
               }}
             >
               <MagneticButtons>
-                <Button className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl">
-                  Scroll Down
+                <Button
+                  className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl"
+                  // onClick={() => {
+                  //   skillRef.current.scrollIntoView({ behavior: "smooth" });
+                  // }}
+                >
+                  <ArrowBigDown />
                 </Button>
               </MagneticButtons>
             </motion.div>
@@ -106,7 +112,9 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </div>
+      {/* <div ref={skillRef}> */}
       <SkillSection />
+      {/* </div> */}
       <TechStackSection />
       <ProfessionalExperiance />
     </>

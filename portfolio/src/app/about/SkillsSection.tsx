@@ -3,7 +3,10 @@ import { Braces, Cloud, Code } from "lucide-react";
 import { motion } from "framer-motion";
 export function SkillSection() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-[60vh] overflow-hidden ">
+    <div
+      className="flex flex-col items-center justify-center w-screen h-[60vh] overflow-hidden "
+      // ref={skill}
+    >
       <motion.div
         className="flex flex-col items-center justify-center"
         initial={{ x: -100, opacity: 0 }}

@@ -2,7 +2,11 @@
 import { Folder, Home, Mail, User } from "lucide-react";
 import { RefObject } from "react";
 import { MagneticButtons } from "./MagneticButtons";
-
+export const scrollTo = (ref: RefObject<HTMLDivElement>) => {
+  if (ref.current) {
+    ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 export default function Sidebar({
   scrollToSection,
 }: {
@@ -15,11 +19,6 @@ export default function Sidebar({
 }) {
   const { introRef, aboutRef, projectsRef, contactRef } = scrollToSection;
 
-  const scrollTo = (ref: RefObject<HTMLDivElement>) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
   return (
     <div className="hidden md:block fixed top-1/2 -translate-y-1/2 text-white space-y-10 bg-white py-10 px-4 rounded-e-xl">
       <MagneticButtons>

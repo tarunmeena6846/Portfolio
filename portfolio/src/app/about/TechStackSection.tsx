@@ -30,7 +30,10 @@ const tools = [
 ];
 export default function TechStackSection() {
   return (
-    <div className="grid grid-cols-2 text-white mt-20 mx-auto w-screen p-10 gap-10  h-[60vh]">
+    <div
+      className="grid grid-cols-2 text-white mt-20 mx-auto w-screen p-10 gap-10  h-[60vh]"
+      // ref={skill}
+    >
       <motion.div
         className="col-span-1 flex flex-col justify-start items-center"
         initial={{ x: -200, opacity: 0 }}
