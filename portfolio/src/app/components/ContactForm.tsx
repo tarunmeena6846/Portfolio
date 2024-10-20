@@ -104,7 +104,7 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Message" type="text" {...field} />
+                  <Textarea placeholder="Message" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

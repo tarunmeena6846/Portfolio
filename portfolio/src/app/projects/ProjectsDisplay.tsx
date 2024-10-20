@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import Trivia from "@/public/projects/projects.png";
 import { motion } from "framer-motion";
 import Hr from "../components/Hr";
+
 const projects = [
   {
     title: "10K Savings Calculator",

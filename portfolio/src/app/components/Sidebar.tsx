@@ -26,7 +26,7 @@ export default function Sidebar({
           <svg
             className="h-[50px] fill-black transition-all duration-200 cursor-pointer hover:fill-[#ec4e39]"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 64 64"
+            viewBox ="0 0 64 64"
           >
             <path d="M32 2L2 32l6 6v24h16V42h16v20h16V38l6-6L32 2zm0 8.83L54 32v22H44V38H20v16H10V32l22-21.17z" />
           </svg>

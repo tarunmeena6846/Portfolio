@@ -2,11 +2,11 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export function MagneticButtons({ children }) {
-  const ref = useRef(null);
+export function MagneticButtons({ children }: { children: React.ReactNode }) {
+  const ref: any = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouse = (e) => {
+  const handleMouse = (e: any) => {
     const { clientX, clientY } = e;
     const { height, width, left, top } = ref.current?.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);

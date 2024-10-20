@@ -2,7 +2,13 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
-export default function projectCard({ data, index }) {
+export default function projectCard({
+  data,
+  index,
+}: {
+  data: any;
+  index: number;
+}) {
   return (
     <>
       <Link href={"projects/"} key={index}>
@@ -36,7 +42,7 @@ export default function projectCard({ data, index }) {
             <h1 className="text-3xl font-bold mb-3">{data.title}</h1>
             <p>{data.desc}</p>
             <div className="flex justify-center items-center flex-row mt-5 flex-wrap">
-              {data.tech.split(",").map((t, index) => (
+              {data.tech.split(",").map((t: any, index: any) => (
                 <span
                   key={index}
                   className="m-1 px-4 py-2 bg-gray-600 text-white "

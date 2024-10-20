@@ -1,15 +1,20 @@
 import { createContext, useContext, useEffect, useState } from "react";
+interface LoadingContextType {
+  isLoading: boolean;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const LoadingContext = createContext(null);
 export const routes = [
   { route: "/", name: "Home" },
   { route: "/about", name: "About" },
   { route: "/projects", name: "Projects" },
   { route: "/contact", name: "Contact" },
 ];
-export function LoadingProvider({ children }) {
+const LoadingContext = createContext<LoadingContextType | undefined>(undefined);
+
+export function LoadingProvider({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
-  const [route, setRoute] = useState(routes[0]);
+  // const [route, setRoute] = useState(routes[0]);
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -19,14 +24,21 @@ export function LoadingProvider({ children }) {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <LoadingContext.Provider
-      value={{ isLoading, setIsLoading, route, setRoute }}
-    >
+    <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
       {children}
     </LoadingContext.Provider>
   );
 }
 
 export function useLoading() {
-  return useContext(LoadingContext);
+  const loadingContext = useContext(LoadingContext);
+  if (!loadingContext) {
+    throw new Error("TodoContext not found");
+  }
+  const { isLoading, setIsLoading } = loadingContext;
+  // return useContext(LoadingContext);
+  return {
+    isLoading,
+    setIsLoading,
+  };
 }

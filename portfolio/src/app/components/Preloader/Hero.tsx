@@ -73,7 +73,7 @@ export default function Hero({ path }: { path: string }) {
           >
             <span className="block w-[10px] h-[10px] bg-black rounded-full mr-[10px]"></span>
             {/* <p className="text-black">{router.route}</p> */}
-            {route.name != "Home" ? (
+            {route?.name != "Home" ? (
               <p className="text-black">{route?.name}</p>
             ) : (
               <p className="text-black">{words[index]}</p>

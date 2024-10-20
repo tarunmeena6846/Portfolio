@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import AboutSection from "./components/AboutSection";
 import ConnectSection from "./components/ConnectSection";
 import Hero from "./components/Preloader/Hero";
@@ -8,9 +8,9 @@ import IntroSection from "./components/IntroSection";
 import MyProjects from "./components/MyProjects";
 import Sidebar from "./components/Sidebar";
 import { AnimatePresence } from "framer-motion";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
 import { usePathname } from "next/navigation";
-import { pre } from "framer-motion/client";
+
 import { useLoading } from "./components/context/LoadingContext";
 
 export default function Home() {
@@ -24,37 +24,7 @@ export default function Home() {
   const pathname = usePathname();
   const prevPathRef = useRef(null); // Store the previous path
   const { isLoading } = useLoading();
-  const { route, setRoute } = useLoading();
-  // const timer = setTimeout(() => {
-  //   // console.log("isLoadingRef.current 3", isLoadingRef.current);
-  //   setIsLoading(false);
-  //   document.body.style.cursor = "default";
 
-  //   // isLoadingRef.current = false; // Once loading is done, update the ref
-  // }, 2000);
-
-  // const timer = setTimeout(() => {
-  //   setIsLoading(false);
-  //   document.body.style.cursor = "default";
-  // }, 2000);
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined" && window.performance) {
-  //     if (performance.navigation.type === 1) {
-  //       alert("This page is reloaded");
-  //       // Add any specific logic you want for page reloads
-  //     } else {
-  //       console.log("This page is not reloaded");
-  //     }
-  //   }
-  // }, []);
-  // console.log("prevPathRef.current", prevPathRef.current);
-  console.log("isLoading", isLoading, typeof isLoading);
-  // console.log("showAnimation", showAnimation);
-  console.log("router", pathname);
-  setRoute(pathname);
-
-  console.log(route);
   return (
     <>
       <AnimatePresence mode="wait">

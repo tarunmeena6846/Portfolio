@@ -14,7 +14,7 @@ import { ArrowBigDown } from "lucide-react";
 
 export default function AboutPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const skillRef = useRef(null);
+  // const skillRef = useRef(null);
   const pathname = usePathname();
   useEffect(() => {
     const timer = setTimeout(() => {

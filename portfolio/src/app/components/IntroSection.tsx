@@ -2,7 +2,13 @@
 import { Button } from "@/src/components/ui/button";
 import { motion } from "framer-motion";
 import { MagneticButtons } from "./MagneticButtons";
-export default function IntroSection({ contactRef }) {
+import { RefObject } from "react";
+import { scrollTo } from "./Sidebar";
+export default function IntroSection({
+  contactRef,
+}: {
+  contactRef: RefObject<HTMLDivElement>;
+}) {
   return (
     <div className="flex flex-col items-center justify-center w-screen min-h-screen overflow-hidden ">
       <div className="mx-auto container grid grid-cols-3 w-full">
@@ -67,9 +73,7 @@ export default function IntroSection({ contactRef }) {
             <MagneticButtons>
               <Button
                 className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl"
-                onClick={() =>
-                  contactRef.current.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => scrollTo(contactRef)}
               >
                 Contact Me
               </Button>
