@@ -2,15 +2,32 @@
 // import { Button } from "@/components/ui/button";
 import { Button } from "@/src/components/ui/button";
 import ProjectsDisplay from "./ProjectsDisplay";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Hr from "../components/Hr";
 import { MagneticButtons } from "../components/MagneticButtons";
 import { useLoading } from "../components/context/LoadingContext";
+import { usePathname } from "next/navigation";
+import Hero from "../components/Preloader/Hero";
+import { useEffect, useState } from "react";
 export default function ProjectsPage() {
-  const { setIsLoading } = useLoading();
-  setIsLoading(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const pathname = usePathname();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+  console.log(isLoading, "isLoading");
+  console.log(isLoading);
+  console.log(pathname);
   return (
     <>
+      <AnimatePresence mode="wait">
+        {isLoading && <Hero path={pathname} />}
+      </AnimatePresence>
       <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
         {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
         <div className="mx-auto container grid grid-cols-3 ">

@@ -23,7 +23,8 @@ export default function Home() {
 
   const pathname = usePathname();
   const prevPathRef = useRef(null); // Store the previous path
-  const isLoading = useLoading();
+  const { isLoading } = useLoading();
+  const { route, setRoute } = useLoading();
   // const timer = setTimeout(() => {
   //   // console.log("isLoadingRef.current 3", isLoadingRef.current);
   //   setIsLoading(false);
@@ -51,10 +52,13 @@ export default function Home() {
   console.log("isLoading", isLoading, typeof isLoading);
   // console.log("showAnimation", showAnimation);
   console.log("router", pathname);
+  setRoute(pathname);
+
+  console.log(route);
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading.isLoading && <Hero />}
+        {isLoading && <Hero />}
       </AnimatePresence>
       <div className="scroll-snap-container">
         <Sidebar

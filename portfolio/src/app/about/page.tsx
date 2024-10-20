@@ -12,12 +12,20 @@ import { usePathname } from "next/navigation";
 import { useLoading } from "../components/context/LoadingContext";
 
 export default function AboutPage() {
-  const { setIsLoading } = useLoading();
-  setIsLoading(false);
+  const [isLoading, setIsLoading] = useState(true);
 
+  const pathname = usePathname();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+  console.log(isLoading, "isLoading");
   return (
     <>
-      {/* <AnimatePresence>{isLoading && <Hero />}</AnimatePresence> */}
+      <AnimatePresence>{isLoading && <Hero path={pathname} />}</AnimatePresence>
 
       <div className="flex flex-col items-center justify-center w-screen ">
         <div className="mx-auto container grid grid-cols-2 ">
