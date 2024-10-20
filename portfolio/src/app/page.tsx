@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && <Hero />}
+        {isLoading && <Hero path="/" />}
       </AnimatePresence>
       <div className="scroll-snap-container">
         <Sidebar
@@ -71,7 +71,7 @@ export default function Home() {
         />
         <div className="scroll-snap-sections">
           <div ref={introRef} className="scroll-snap-section" id="intro">
-            <IntroSection />
+            <IntroSection contactRef={contactRef} />
           </div>
           <div ref={aboutRef} className="scroll-snap-section" id="about">
             <AboutSection />

@@ -5,9 +5,19 @@ import { Textarea } from "@/src/components/ui/textarea";
 import { motion } from "framer-motion";
 import Hr from "./Hr";
 import { MagneticButtons } from "./MagneticButtons";
+import { useState } from "react";
+import ContactForm from "./ContactForm";
+// import ContactForm from "@/src/components/ui/form";
 
 export default function ConnectSection() {
-  const handleFormSubmit = () => {};
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  // const handleFormSubmit = ({}) => {
+
+  // };
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden">
       <div className="mx-auto container grid grid-cols-2 ">
@@ -119,7 +129,7 @@ export default function ConnectSection() {
           </motion.div>
         </motion.div>
         <motion.div
-          className="px-20 "
+          className="px-20 backdrop-blur-lg"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -127,33 +137,7 @@ export default function ConnectSection() {
             type: "spring",
           }}
         >
-          <form
-            onSubmit={handleFormSubmit}
-            className="space-y-5 flex flex-col items-center shadow-lg backdrop-blur-lg border p-10 rounded-3xl"
-          >
-            <Input
-              placeholder="Your Name"
-              type="text"
-              required
-              className="w-full bg-white"
-            />
-            <Input
-              placeholder="Your Email"
-              type="email"
-              required
-              className="w-full bg-white"
-            />
-            <Textarea
-              placeholder="Your Message"
-              className="w-full bg-white"
-              required
-            />
-            <MagneticButtons>
-              <Button className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl">
-                Submit
-              </Button>
-            </MagneticButtons>
-          </form>
+          <ContactForm></ContactForm>
         </motion.div>
       </div>
     </div>
