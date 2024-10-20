@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { opacity, slideUp } from "./anim";
+import { useRouter } from "next/navigation";
 
 const words = [
   "Hello",
+  "नमस्ते",
   "Bonjour",
   "Ciao",
   "Olà",
@@ -14,10 +16,9 @@ const words = [
   "Hallo",
 ];
 
-export default function Index() {
+export default function Hero() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
-
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
   }, []);
@@ -68,6 +69,7 @@ export default function Index() {
             className="flex text-white text-[42px] items-center absolute z-[1]"
           >
             <span className="block w-[10px] h-[10px] bg-black rounded-full mr-[10px]"></span>
+            {/* <p className="text-black">{router.route}</p> */}
             <p className="text-black">{words[index]}</p>
           </motion.p>
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">

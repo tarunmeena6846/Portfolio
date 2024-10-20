@@ -3,16 +3,26 @@ import { Button } from "@/src/components/ui/button";
 import { SkillSection } from "./SkillsSection";
 import TechStackSection from "./TechStackSection";
 import ProfessionalExperiance from "./ProfessionalExperiance";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Hr from "../components/Hr";
+import { MagneticButtons } from "../components/MagneticButtons";
+import { useEffect, useState } from "react";
+import Hero from "../components/Preloader/Hero";
+import { usePathname } from "next/navigation";
+import { useLoading } from "../components/context/LoadingContext";
 
 export default function AboutPage() {
+  const { setIsLoading } = useLoading();
+  setIsLoading(false);
+
   return (
     <>
+      {/* <AnimatePresence>{isLoading && <Hero />}</AnimatePresence> */}
+
       <div className="flex flex-col items-center justify-center w-screen ">
         <div className="mx-auto container grid grid-cols-2 ">
           <motion.div
-            className=" px-20 space-y-10 flex flex-col justify-center"
+            className="col-span-1 px-20 space-y-10 flex flex-col justify-center items-center"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -64,9 +74,11 @@ export default function AboutPage() {
                 type: "spring",
               }}
             >
-              <Button className="bg-white text-black hover:bg-gray-700 hover:text-white p-5 rounded-2xl w-1/2">
-                Scroll Down
-              </Button>
+              <MagneticButtons>
+                <Button className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl">
+                  Scroll Down
+                </Button>
+              </MagneticButtons>
             </motion.div>
           </motion.div>
           <motion.div

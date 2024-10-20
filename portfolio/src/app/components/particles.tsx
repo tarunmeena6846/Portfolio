@@ -228,7 +228,7 @@ export default function Particles({
 
   return (
     <div
-      className="fixed inset-0 -z-10 w-full h-full "
+      className="fixed inset-0 z-10 w-full h-full "
       ref={canvasContainerRef}
       aria-hidden="true"
     >

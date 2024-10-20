@@ -5,8 +5,10 @@ import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Hr from "./Hr";
 import { MagneticButtons } from "./MagneticButtons";
+import { useLoading } from "./context/LoadingContext";
 export default function AboutSection() {
   const router = useRouter();
+
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden ">
       <div className="mx-auto container grid grid-cols-2 ">
