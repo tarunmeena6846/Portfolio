@@ -13,7 +13,7 @@ export default function IntroSection({
 }) {
   return (
     <div
-      className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 w-full h-screen flex items-center justify-center"
+      className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 w-screen h-screen flex items-center justify-center"
       // ref={introRef}
       // id="intro"
     >

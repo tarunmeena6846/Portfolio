@@ -33,13 +33,16 @@ body {
 
 :root {
   --vh: 1vh;
+  width: screen;
 }
 
 .scroll-snap-container {
-  height: 100vh;
+  /* height: 100vh; */
+  width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  overflow-x: hidden;
 }
 
 .scroll-snap-sections {

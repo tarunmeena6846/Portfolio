@@ -40,37 +40,39 @@ export default function Home() {
         }}
       />
       <div className="scroll-snap-container ">
-        <div className=" grid grid-cols-1 grid-rows-8 lg:grid-rows-4 lg:grid-cols-1">
-          <div
-            ref={introRef}
-            className="scroll-snap-section row-span-2"
-            id="intro"
-          >
-            <IntroSection contactRef={contactRef} />
-          </div>
-          <div
-            ref={aboutRef}
-            className="scroll-snap-section mt-10 md:mt-0 row-span-2"
-            id="about"
-          >
-            <AboutSection />
-          </div>
-          <div
-            ref={projectsRef}
-            className="scroll-snap-section row-span-2"
-            id="projects"
-          >
-            <MyProjects />
-          </div>
-          <div
-            ref={contactRef}
-            className="scroll-snap-section row-span-2"
-            id="connect"
-          >
-            <ConnectSection />
+        {/* <div className="scroll-snap-sections"> */}
+          <div className=" grid grid-cols-1 grid-rows-8 lg:grid-rows-4 lg:grid-cols-1">
+            <div
+              ref={introRef}
+              className="scroll-snap-section row-span-2"
+              id="intro"
+            >
+              <IntroSection contactRef={contactRef} />
+            </div>
+            <div
+              ref={aboutRef}
+              className="scroll-snap-section mt-10 md:mt-0 row-span-2"
+              id="about"
+            >
+              <AboutSection />
+            </div>
+            <div
+              ref={projectsRef}
+              className="scroll-snap-section row-span-2"
+              id="projects"
+            >
+              <MyProjects />
+            </div>
+            <div
+              ref={contactRef}
+              className="scroll-snap-section row-span-2"
+              id="connect"
+            >
+              <ConnectSection />
+            </div>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
