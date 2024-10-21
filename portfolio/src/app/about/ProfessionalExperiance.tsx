@@ -17,17 +17,17 @@ const JobCard: React.FC<JobCardProps> = ({
   technologies,
 }) => {
   return (
-    <div className="grid gap-4 relative">
+    <div className="grid gap-4 relative text-white">
       {/* Circle Indicator */}
       <div className="aspect-square w-5 bg-white rounded-full absolute left-0 translate-x-[-29.5px] z-10"></div>
       {/* Job Year */}
-      <div className="font-medium text-lg">{year}</div>
+      <div className="font-medium">{year}</div>
       <div>
         {/* Company Name and Role */}
-        <h3 className="font-semibold text-xl text-white">{company}</h3>
-        <h4 className="font-light text-md mb-4">{role}</h4>
+        <h3 className="font-semibold text-md ">{company}</h3>
+        <h4 className="font-light text-sm mb-4">{role}</h4>
         {/* Description */}
-        <p className="text-justify text-lg">{description}</p>
+        <p className="">{description}</p>
         {/* Technologies Used */}
         <div className="flex flex-wrap gap-2 mt-4 text-sm">
           {technologies.map((tech, index) => (
@@ -89,10 +89,10 @@ export default function ProfessionalExperience() {
   ];
 
   return (
-    <div className=" w-screen my-10 pb-20">
+    <div className=" w-full my-10 pb-20 p-10 md:p-20">
       {/* Title Section */}
       <motion.div
-        className="flex flex-col items-center  w-screen p-10"
+        className="flex flex-col items-center "
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -100,15 +100,16 @@ export default function ProfessionalExperience() {
           type: "spring",
         }}
       >
-        <Hr />
         <h1 className="text-4xl text-transparent bg-white sm:text-6xl md:text-6xl bg-clip-text">
           Professional Experience
         </h1>
+        <Hr />
       </motion.div>
 
       {/* Job Cards */}
       <motion.div
-        className="relative after:absolute after:inset-y-2 after:w-1 after:bg-white after:left-[-4px] md:after:left-1 lg:after:left-2 xl:after:left-3 grid gap-8 md:gap-12 pl-16 md:px-8 text-white  ml-10"
+        // className="relative  after:absolute after:inset-y-2 after:w-1 after:bg-white after:left-[-4px] md:after:left-1 lg:after:left-2 xl:after:left-3 grid gap-8 gap-12 pl-16 px-8 text-white ml-10"
+        className="space-y-10 mt-10"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{

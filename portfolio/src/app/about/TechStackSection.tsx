@@ -43,7 +43,7 @@ export default function TechStackSection() {
           type: "spring",
         }}
       >
-        <h2 className="text-3xl mb-4">Languages & Frameworks</h2>
+        <h2 className="ml-10 text-3xl mb-4">Languages & Frameworks</h2>
         <Languages />
       </motion.div>
       {/* <Separator orientation="vertical" /> */}
