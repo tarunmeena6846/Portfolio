@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export function SkillSection() {
   return (
     <div
-      className="flex flex-col items-center justify-center w-screen h-[60vh] overflow-hidden "
+      className="flex flex-col items-center justify-center w-screen  p-5"
       // ref={skill}
     >
       <motion.div
@@ -16,15 +16,23 @@ export function SkillSection() {
           type: "spring",
         }}
       >
-        <h1 className="text-4xl text-transparent bg-white sm:text-6xl md:text-6xl  bg-clip-text ">
+        <h1 className=" text-transparent bg-white text-4xl  md:text-3xl lg:text-7xl  bg-clip-text ">
           Skills and Expertise
         </h1>
-        <p className="text-center text-zinc-400 text-lg">
+        <motion.p
+          className="text-gray-400 lg:text-xl"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            delay: 0.5,
+            type: "spring",
+          }}
+        >
           Here are my skills and technologies I've worked with.
-        </p>
+        </motion.p>
       </motion.div>
       <motion.div
-        className="text-white grid grid-cols-1 sm:grid-cols-4 text-xl gap-10 mt-10"
+        className="text-white grid grid-cols-2 sm:grid-cols-4 text-xl gap-5 md:gap-10 mt-10"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -34,19 +42,59 @@ export function SkillSection() {
       >
         <div className="col-span-1 flex flex-col gap-2 items-center ">
           <CubeIcon className="w-[48px] h-[48px]" />
-          <h1>Web Developement</h1>
+          <motion.p
+            className="text-gray-400 lg:text-xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              type: "spring",
+            }}
+          >
+            Web Developement
+          </motion.p>
         </div>
         <div className="col-span-1 flex flex-col  items-center  gap-2 ">
           <Braces className="w-[48px] h-[48px]" />
-          <h1>Rest API</h1>
+          <motion.p
+            className="text-gray-400 lg:text-xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              type: "spring",
+            }}
+          >
+            Rest API
+          </motion.p>
         </div>
         <div className=" col-span-1 flex flex-col  gap-2 items-center">
           <Cloud className="w-[48px] h-[48px]" />
-          <h1>AWS</h1>
+          <motion.p
+            className="text-gray-400 lg:text-xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              type: "spring",
+            }}
+          >
+            AWS
+          </motion.p>
         </div>
         <div className=" col-span-1 flex flex-col  gap-2 items-center">
           <Code className="w-[48px] h-[48px]" />
-          <h1>C++</h1>
+          <motion.p
+            className="text-gray-400 lg:text-xl"
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              type: "spring",
+            }}
+          >
+            C++
+          </motion.p>
         </div>
       </motion.div>
     </div>
