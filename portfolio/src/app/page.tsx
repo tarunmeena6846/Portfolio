@@ -30,26 +30,43 @@ export default function Home() {
       <AnimatePresence mode="wait">
         {isLoading && <Hero path="/" />}
       </AnimatePresence>
-      <div className="scroll-snap-container">
-        <Sidebar
-          scrollToSection={{
-            introRef,
-            aboutRef,
-            projectsRef,
-            contactRef,
-          }}
-        />
-        <div className="scroll-snap-sections">
-          <div ref={introRef} className="scroll-snap-section" id="intro">
+
+      <Sidebar
+        scrollToSection={{
+          introRef,
+          aboutRef,
+          projectsRef,
+          contactRef,
+        }}
+      />
+      <div className="scroll-snap-container ">
+        <div className=" grid grid-cols-1 grid-rows-8 lg:grid-rows-4 lg:grid-cols-1">
+          <div
+            ref={introRef}
+            className="scroll-snap-section row-span-2"
+            id="intro"
+          >
             <IntroSection contactRef={contactRef} />
           </div>
-          <div ref={aboutRef} className="scroll-snap-section" id="about">
+          <div
+            ref={aboutRef}
+            className="scroll-snap-section mt-10 md:mt-0 row-span-2"
+            id="about"
+          >
             <AboutSection />
           </div>
-          <div ref={projectsRef} className="scroll-snap-section" id="projects">
+          <div
+            ref={projectsRef}
+            className="scroll-snap-section row-span-2"
+            id="projects"
+          >
             <MyProjects />
           </div>
-          <div ref={contactRef} className="scroll-snap-section" id="connect">
+          <div
+            ref={contactRef}
+            className="scroll-snap-section row-span-2"
+            id="connect"
+          >
             <ConnectSection />
           </div>
         </div>

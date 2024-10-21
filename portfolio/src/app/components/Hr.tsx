@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Hr() {
   return (
-    <div className="flex justify-center items-center flex-col mt-5">
+    <div className="flex justify-center  flex-col mt-5 ml-5">
       <motion.div
         className="bg-white w-20 h-1 rounded-full mb-2"
         initial={{
@@ -29,7 +29,7 @@ export default function Hr() {
           x: 0,
         }}
         transition={{
-        delay: 0.3,
+          delay: 0.3,
 
           type: "spring",
         }}

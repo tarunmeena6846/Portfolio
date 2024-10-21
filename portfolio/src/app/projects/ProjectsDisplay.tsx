@@ -51,7 +51,7 @@ const projects = [
 // console.log(Trivia);
 export default function ProjectsDisplay() {
   return (
-    <div className=" my-10">
+    <div className="my-10">
       <div className="mt-10 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
         <motion.div
           className="my-5 self-start "

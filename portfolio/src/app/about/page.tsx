@@ -29,7 +29,7 @@ export default function AboutPage() {
       <AnimatePresence>{isLoading && <Hero path={pathname} />}</AnimatePresence>
 
       <div className="flex flex-col items-center justify-center w-screen ">
-        <div className="mx-auto container grid grid-cols-2 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
           <motion.div
             className="col-span-1 px-20 space-y-10 flex flex-col justify-center items-center"
             initial={{ x: -100, opacity: 0 }}

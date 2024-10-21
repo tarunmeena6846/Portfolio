@@ -64,7 +64,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className=" space-y-5 shadow-lg  border p-10 rounded-3xl text-white"
+        className=" space-y-5 shadow-lg  border p-5 mt-10 md:mt-0 md:p-10 rounded-3xl text-white"
       >
         <FormField
           control={form.control}
@@ -74,7 +74,12 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Name" type="text" {...field} />
+                  <Input
+                    placeholder="Name"
+                    type="text"
+                    {...field}
+                    className="bg-white"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -89,7 +94,12 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Email address</FormLabel>
                 <FormControl>
-                  <Input placeholder="Email address" type="email" {...field} />
+                  <Input
+                    placeholder="Email address"
+                    type="email"
+                    {...field}
+                    className="bg-white"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -104,7 +114,11 @@ export default function ContactForm() {
               <FormItem>
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                  <Textarea placeholder="Message" {...field} />
+                  <Textarea
+                    placeholder="Message"
+                    {...field}
+                    className="bg-white"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -114,7 +128,7 @@ export default function ContactForm() {
         {/* <MagneticButtons> */}
         <Button
           type="submit"
-          className="bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl"
+          className="bg-white text-black hover:bg-red-700 hover:text-white lg:p-6 rounded-3xl text-xl"
         >
           Submit
         </Button>
