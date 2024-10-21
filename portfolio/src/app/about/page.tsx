@@ -12,9 +12,9 @@ import { usePathname } from "next/navigation";
 import { ArrowBigDown } from "lucide-react";
 
 export default function AboutPage({
-  skillRef,
+  // skillRef,
 }: {
-  skillRef: RefObject<HTMLDivElement>;
+  // skillRef: RefObject<HTMLDivElement>;
 }) {
   const [isLoading, setIsLoading] = useState(true);
   // const skillRef = useRef(null);
