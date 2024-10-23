@@ -48,7 +48,7 @@ export default function IntroSection({
           Full Stack Developer
         </motion.h1>
         <motion.p
-          className="text-gray-400 lg:text-xl"
+          className="text-gray-200 lg:text-xl"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -96,7 +96,7 @@ export default function IntroSection({
       >
         <img
           src="./photo.jpeg"
-          className="rounded-full filter grayscale hover:blur-0 hover:grayscale-0 transition-all ease duration-500 h-[30%] w-[30%] lg:w-full lg:h-[60%]"
+          className="rounded-full filter grayscale hover:blur-0 hover:grayscale-0 transition-all ease duration-500  w-[30%] md:h-[30%] md:w-[30%] lg:w-full lg:h-[60%]"
         ></img>
       </motion.div>
     </div>

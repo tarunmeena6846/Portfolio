@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import Hero from "../components/Preloader/Hero";
 import { useEffect, useState } from "react";
 import { ArrowBigDown } from "lucide-react";
+import { Menu } from "../components/menu/Menu";
 export default function ProjectsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +30,7 @@ export default function ProjectsPage() {
       <AnimatePresence mode="wait">
         {isLoading && <Hero path={pathname} />}
       </AnimatePresence>
-
+      <Menu />
       {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
       <div className=" grid grid-cols-1 grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 md:h-screen">
         {/* <motion.div

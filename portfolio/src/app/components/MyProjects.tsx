@@ -14,7 +14,7 @@ export default function MyProjects({}: // projectRef,
   return (
     <div className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 h-screen">
       <motion.div
-        className="col-span-1 order-2 flex justify-center items-center"
+        className="col-span-1 order-2 flex justify-center items-center p-5"
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -48,7 +48,7 @@ export default function MyProjects({}: // projectRef,
           <Hr />
         </motion.h1>
         <motion.p
-          className="text-gray-400 lg:text-xl"
+          className="text-zinc-200 lg:text-xl"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{

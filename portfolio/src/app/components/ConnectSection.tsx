@@ -22,7 +22,7 @@ export default function ConnectSection({}: // connectRef,
 
   // };
   return (
-    <div className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 h-screen m-10">
+    <div className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1  m-10">
       <motion.div
         className="col-span-1 row-span-1 lg:col-span-2   p-5 md:px-20 space-y-5 lg:space-y-10 flex flex-col justify-center md:ml-10"
         initial={{ x: -100, opacity: 0 }}
@@ -44,7 +44,7 @@ export default function ConnectSection({}: // connectRef,
           <Hr />
         </motion.h3>
         <motion.p
-          className=" text-zinc-400 lg:text-xl animate-fade-up"
+          className=" text-zinc-200 lg:text-xl animate-fade-up"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -56,7 +56,7 @@ export default function ConnectSection({}: // connectRef,
           hi.
         </motion.p>
         <motion.p
-          className=" text-zinc-400 lg:text-xl animate-fade-up"
+          className=" text-zinc-200 lg:text-xl animate-fade-up"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -136,7 +136,7 @@ export default function ConnectSection({}: // connectRef,
         </motion.div>
       </motion.div>
       <motion.div
-        className="flex flex-col justify-center md:px-20 lg:px-0 mt-20 "
+        className="flex flex-col justify-center md:px-20 lg:px-0 md:mt-10 pb-10"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{

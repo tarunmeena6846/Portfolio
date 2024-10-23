@@ -38,7 +38,7 @@ export default function AboutSection({}: // aboutRef,
         </motion.h1>
 
         <motion.h1
-          className=" text-zinc-400 lg:text-xl animate-fade-up"
+          className=" text-zinc-200 lg:text-xl animate-fade-up"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -69,7 +69,7 @@ export default function AboutSection({}: // aboutRef,
         {/* </div> */}
       </motion.div>
       <motion.div
-        className="col-span-1 row-span-1 flex justify-center items-center"
+        className="col-span-1 row-span-1 flex justify-center items-center p-5"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{

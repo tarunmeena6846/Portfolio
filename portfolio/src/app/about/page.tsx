@@ -10,10 +10,10 @@ import { RefObject, useEffect, useRef, useState } from "react";
 import Hero from "../components/Preloader/Hero";
 import { usePathname } from "next/navigation";
 import { ArrowBigDown } from "lucide-react";
+import { Menu } from "../components/menu/Menu";
 
-export default function AboutPage({
-  // skillRef,
-}: {
+export default function AboutPage({}: // skillRef,
+{
   // skillRef: RefObject<HTMLDivElement>;
 }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +30,7 @@ export default function AboutPage({
   return (
     <>
       <AnimatePresence>{isLoading && <Hero path={pathname} />}</AnimatePresence>
-
+      <Menu />
       {/* <div className="flex flex-col items-center justify-center w-screen "> */}
       <div className=" grid grid-cols-1 grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 h-screen">
         <motion.div

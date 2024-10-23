@@ -78,7 +78,7 @@ export default function ContactForm() {
                     placeholder="Name"
                     type="text"
                     {...field}
-                    className="bg-white"
+                    className="bg-white text-black"
                   />
                 </FormControl>
                 <FormMessage />
@@ -98,7 +98,7 @@ export default function ContactForm() {
                     placeholder="Email address"
                     type="email"
                     {...field}
-                    className="bg-white"
+                    className="bg-white text-black"
                   />
                 </FormControl>
                 <FormMessage />
@@ -117,7 +117,7 @@ export default function ContactForm() {
                   <Textarea
                     placeholder="Message"
                     {...field}
-                    className="bg-white"
+                    className="bg-white text-black"
                   />
                 </FormControl>
                 <FormMessage />
