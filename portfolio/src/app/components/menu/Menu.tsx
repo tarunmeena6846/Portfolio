@@ -25,7 +25,7 @@ const MenuButton = ({ handleMenuToggle, isActive }) => {
       <MagneticButtons>
         <div
           onClick={handleMenuToggle}
-          className="cursor-pointer bg-white p-5 rounded-full hover:bg-red-700"
+          className="cursor-pointer bg-white p-5 rounded-full "
         >
           <div className="relative w-8 h-8 flex items-center justify-center ">
             <span

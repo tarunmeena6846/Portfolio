@@ -47,7 +47,21 @@ const JobCard: React.FC<JobCardProps> = ({
 export default function ProfessionalExperience() {
   const jobs = [
     {
-      year: "2023 - Present",
+      year: "Nov 2024 - Present",
+      company: "Rebet Inc.",
+      role: "Next.js Developer | Full-time",
+      description:
+        "Collaborated on the development of Rebet’s high-traffic sports betting platform using Next.js, Redux, and Material- UI, supporting a user base of over 200K users.",
+      technologies: [
+        "Next.js",
+        "React.js",
+        "Redux",
+        "Mui",
+        "Framer-motion",
+      ],
+    },
+    {
+      year: "Dec 2023 - Nov 2024",
       company: "Ma'at Love Enterprise LLC",
       role: "Fullstack Web Developer | Part-time",
       description:

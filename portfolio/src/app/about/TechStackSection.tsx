@@ -32,7 +32,7 @@ export default function TechStackSection() {
   return (
     <div
       className="grid grid-cols-1 md:grid-cols-2 text-white mt-20 mx-auto w-screen p-5 md:p-10 gap-10 "
-      // ref={skill}
+    // ref={skill}
     >
       <motion.div
         className="col-span-1 flex flex-col justify-start items-center"
@@ -43,7 +43,7 @@ export default function TechStackSection() {
           type: "spring",
         }}
       >
-        <h2 className="ml-10 text-3xl mb-4">Languages & Frameworks</h2>
+        <h2 className="ml-10 text-3xl mb-4 flex text-center">Languages & Frameworks</h2>
         <Languages />
       </motion.div>
       {/* <Separator orientation="vertical" /> */}

@@ -5,7 +5,7 @@ export function SkillSection() {
   return (
     <div
       className="flex flex-col items-center justify-center w-screen  p-5"
-      // ref={skill}
+    // ref={skill}
     >
       <motion.div
         className="flex flex-col items-center justify-center"
@@ -20,7 +20,7 @@ export function SkillSection() {
           Skills and Expertise
         </h1>
         <motion.p
-          className="text-gray-400 lg:text-xl"
+          className="text-gray-400 lg:text-xl flex text-center"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -43,7 +43,7 @@ export function SkillSection() {
         <div className="col-span-1 flex flex-col gap-2 items-center ">
           <CubeIcon className="w-[48px] h-[48px]" />
           <motion.p
-            className="text-gray-400 lg:text-xl"
+            className="text-gray-400 lg:text-xl flex text-center"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{

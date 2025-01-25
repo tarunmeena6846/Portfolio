@@ -11,7 +11,7 @@ export default function projectCard({
 }) {
   return (
     <>
-      <Link href={"projects/"} key={index}>
+      <Link href={data.link} key={index} target="_blank">
         <motion.div
           className="z-10 relative flex justify-center items-start flex-col mb-5 md:px-10 w-full h-auto bg-gray-100 group/tes py-20 px-5 md:py-2 aspect-video "
           initial={{

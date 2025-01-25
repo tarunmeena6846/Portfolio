@@ -1,6 +1,11 @@
 import { Button } from "@/src/components/ui/button";
 import ProjectCard from "./ProjectCard";
 import Trivia from "@/public/projects/projects.png";
+import Streamify from "@/public/projects/streamify.png";
+import Zerodha from "@/public/projects/zerodha.png";
+import Healthscribe from "@/public/projects/healthscribe.jpg";
+import CourseEra from "@/public/projects/courseera.png";
+import Scrapper from "@/public/projects/web_scraping.png";
 import { motion } from "framer-motion";
 import Hr from "../components/Hr";
 import { MagneticButtons } from "../components/MagneticButtons";
@@ -10,43 +15,49 @@ const projects = [
     title: "10K Savings Calculator",
     desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
     year: "2024",
-    tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",
+    tech: "React.js, Typescript, Tailwind CSS, Recoil, Stripe API",
     bg: Trivia,
+    link: "https://github.com/tarunmeena6846/10K_Plus_Savings_challenge"
   },
   {
     title: "Streamify",
     desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
     year: "2024",
-    tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",
-    bg: Trivia,
+    tech: "NextJS, Typescript, Tailwind CSS, Shadcn UI",
+    bg: Streamify,
+    link: "https://github.com/tarunmeena6846/streamify.git"
   },
   {
     title: "YC Web-Scrapper",
     desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
     year: "2024",
-    tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",
-    bg: Trivia,
+    tech: "Node.js, Typescript, Cheerio, jQuery",
+    bg: Scrapper,
+    link: "https://github.com/tarunmeena6846/Webscraper"
   },
   {
     title: "Healthscribe",
     desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
     year: "2024",
-    tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",
-    bg: Trivia,
+    tech: "React.js, Typescript, Tailwind CSS, AWS HealthScribe, Recoil",
+    bg: Healthscribe,
+    link: "https://github.com/tarunmeena6846/Healthscribe"
   },
   {
     title: "CourseEra Clone",
     desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
     year: "2024",
-    tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",
-    bg: Trivia,
+    tech: "React.js, Typescript, MUI, Recoil",
+    bg: CourseEra,
+    link: "https://github.com/tarunmeena6846/CourseApp"
   },
   {
     title: "Zerodha Clone",
     desc: "Generative Trivia is a web application that I created using Gemini AI API to generate trivia questions and answers.",
     year: "2024",
-    tech: "NextJS, Typescript, Gemini AI API, Tailwind CSS, Shadcn UI, Firebase",
-    bg: Trivia,
+    tech: "React.js, Typescript, MUI, Recoil",
+    bg: Zerodha,
+    link: "https://github.com/tarunmeena6846/Zerodha-Clone"
   },
 ];
 // console.log(Trivia);
