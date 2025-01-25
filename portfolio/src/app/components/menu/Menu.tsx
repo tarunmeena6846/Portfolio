@@ -19,7 +19,12 @@ export function Menu() {
   );
 }
 
-const MenuButton = ({ handleMenuToggle, isActive }) => {
+interface MenuButtonProps {
+  handleMenuToggle: () => void;
+  isActive: boolean;
+}
+
+const MenuButton = ({ handleMenuToggle, isActive }: MenuButtonProps) => {
   return (
     <div className="fixed top-5 right-4 z-[90]">
       <MagneticButtons>
