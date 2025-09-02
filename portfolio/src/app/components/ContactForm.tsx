@@ -64,7 +64,7 @@ export default function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleSubmit)}
-        className=" space-y-5 shadow-lg  border p-5 mt-10 md:mt-0 md:p-10 rounded-3xl text-white"
+        className="space-y-5 shadow-lg  border p-5 mt-10 md:mt-0 md:p-10 rounded-3xl text-white w-full"
       >
         <FormField
           control={form.control}
@@ -125,14 +125,14 @@ export default function ContactForm() {
             );
           }}
         />
-        {/* <MagneticButtons> */}
         <Button
-          type="submit"
-          className="bg-white text-black hover:bg-red-700 hover:text-white lg:p-6 rounded-3xl text-xl"
+          className=" bg-white text-black
+ hover:bg-red-700 hover:text-white
+ px-[1em] py-[0.75em]
+ rounded-[1.5em]"
         >
           Submit
         </Button>
-        {/* </MagneticButtons> */}
       </form>
       {status && <p className="mt-4 text-white">{status}</p>}
     </Form>

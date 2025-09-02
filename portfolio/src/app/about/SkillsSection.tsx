@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export function SkillSection() {
   return (
     <div
-      className="flex flex-col items-center justify-center w-screen  p-5"
+      className="flex flex-col items-center justify-center w-screen p-5"
     // ref={skill}
     >
       <motion.div

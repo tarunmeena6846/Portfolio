@@ -22,9 +22,6 @@ export default function ProjectsPage() {
 
     return () => clearTimeout(timer);
   }, []);
-  console.log(isLoading, "isLoading");
-  console.log(isLoading);
-  console.log(pathname);
   return (
     <>
       <AnimatePresence mode="wait">
@@ -32,7 +29,12 @@ export default function ProjectsPage() {
       </AnimatePresence>
       <Menu />
       {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
-      <div className=" grid grid-cols-1 grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 md:h-screen">
+      <div
+        // className=" grid grid-cols-1 grid-rows-1 lg:grid-cols-3 lg:grid-rows-1 md:h-screen"
+        className="flex flex-col md:flex-row
+    w-full h-screen justify-center md:justify-between
+    gap-[16px] lg:gap-[16px] 2xl:gap-[32px]"
+      >
         {/* <motion.div
           className="col-span-2 flex justify-center items-center"
           initial={{ x: -100, opacity: 0 }}
@@ -45,13 +47,20 @@ export default function ProjectsPage() {
         <motion.div
           className="hidden lg:flex col-span-1 order-1 flex justify-center items-center"
           initial={{ x: -100, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
           transition={{
             delay: 0.7,
             type: "spring",
           }}
         >
-          <img src="./projects.svg" className="h-[80%] " />
+          <img src="./projects.svg" className="
+          rounded-full
+          filter grayscale hover:grayscale-0 hover:blur-0
+          transition-all duration-500
+
+          w-[10em] sm:w-[12em] md:w-[14em] lg:w-[16em] xl:w-[24em]
+          h-[10em] sm:h-[12em] md:h-[14em] lg:h-[16em] xl:h-[24em]
+         "  />
         </motion.div>
         <motion.div
           className="col-span-1 row-span-1 lg:col-span-2 p-10 md:px-20 space-y-5 lg:space-y-10 flex flex-col justify-center md:ml-10"
@@ -71,7 +80,7 @@ export default function ProjectsPage() {
             }}
           >
             My Projects
-            <Hr />
+            <Hr myProjectSection={false} />
           </motion.h1>
           <motion.p
             className="text-gray-400 lg:text-xl"
@@ -82,7 +91,7 @@ export default function ProjectsPage() {
               type: "spring",
             }}
           >
-            These are some of the projects that I have done.
+            These are some of the projects/Ideas that I have worked on.
           </motion.p>
           <motion.div
             className="flex gap-3"
@@ -101,9 +110,9 @@ export default function ProjectsPage() {
             {/* <MagneticButtons> */}
             <Button
               className=" bg-white text-black hover:bg-red-700 hover:text-white p-6 rounded-3xl text-xl"
-              // onClick={() => {
-              //   skillRef.current.scrollIntoView({ behavior: "smooth" });
-              // }}
+            // onClick={() => {
+            //   skillRef.current.scrollIntoView({ behavior: "smooth" });
+            // }}
             >
               <ArrowBigDown />
             </Button>

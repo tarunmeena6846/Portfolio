@@ -50,20 +50,81 @@ body {
   height: calc(var(--vh, 1vh) * 100);
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  @media (max-width: 425px) {
+    height: 100%;
+
+  }
   /* padding: "10px"; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
   .scroll-snap-container {
     scroll-snap-type: none;
   }
 }
-/* 
-@media (max-width: 1024px) {
-  .scroll-snap-sections {
-    height: 100%;
-    display: grid;
-    grid-template-rows: repeat(8, 1fr);
-    gap: 30px;
+/* Base (mobile) */
+.text-xl {
+  font-size: 2em;
+  line-height: normal;
+}
+.text-lg {
+  font-size: 1em;
+}
+
+/* Tablet / small desktop */
+@media (min-width: 768px) {
+  .text-xl {
+    font-size: 3em;
+    line-height: normal;
+
   }
-} */
+  .text-base {
+    font-size: 1em;
+    line-height: normal;
+
+  }
+  .text-button {
+    font-size: 1em;
+    line-height: normal;
+
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  .text-xl {
+    font-size: 5em;
+    line-height: normal;
+
+  }
+  .text-base {
+    font-size: 1.5em;
+    line-height: normal;
+
+  }
+  .text-button {
+    font-size: 1.5em;
+    line-height: normal;
+
+  }
+}
+
+/* Very large screens / 4K */
+@media (min-width: 1920px) {
+  .text-xl {
+    font-size: 6em;
+  }
+  .text-base {
+    font-size: 2em;
+  }
+  .text-button {
+    font-size: 2em;
+  }
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

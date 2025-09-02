@@ -7,16 +7,21 @@ import Hr from "./Hr";
 import { MagneticButtons } from "./MagneticButtons";
 import { useLoading } from "./context/LoadingContext";
 import { RefObject } from "react";
-export default function AboutSection({}: // aboutRef,
-{
-  // aboutRef: RefObject<HTMLDivElement>;
-}) {
+export default function AboutSection({ }: // aboutRef,
+  {
+    // aboutRef: RefObject<HTMLDivElement>;
+  }) {
   const router = useRouter();
 
   return (
-    <div className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 h-screen">
+    <div className="
+        flex flex-col md:flex-row
+        items-center justify-center
+        w-full h-full
+        gap-[16px] lg:gap-[16px] 2xl:gap-[32px]
+      ">
       <motion.div
-        className="col-span-1 row-span-1 lg:col-span-2   p-10 md:px-20 space-y-5 lg:space-y-10 flex flex-col justify-center md:ml-10"
+        className="min-w-[90%] md:min-w-[55%] flex flex-col justify-center gap-[8px] lg:gap-[16px] 2xl:gap-[32px]"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -25,7 +30,12 @@ export default function AboutSection({}: // aboutRef,
       >
         {/* <div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5"> */}
         <motion.h1
-          className="text-4xl  md:text-3xl lg:text-7xl text-transparent bg-white cursor-default  bg-clip-text text-gray-400"
+          // className="text-4xl  md:text-3xl lg:text-7xl text-transparent bg-white cursor-default  bg-clip-text text-gray-400"
+          className="
+          text-xl
+          text-transparent bg-clip-text
+          bg-gradient-to-r from-gray-300 to-white
+        "
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -38,7 +48,8 @@ export default function AboutSection({}: // aboutRef,
         </motion.h1>
 
         <motion.h1
-          className=" text-zinc-200 lg:text-xl animate-fade-up"
+          className="text-base
+            text-gray-200"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -59,7 +70,11 @@ export default function AboutSection({}: // aboutRef,
         >
           <MagneticButtons>
             <Button
-              className="bg-white text-black hover:bg-red-700 hover:text-white lg:p-6 rounded-3xl  lg:text-lg"
+              className="  bg-white text-black
+              hover:bg-red-700 hover:text-white
+              px-[1em] py-[0.75em]
+              rounded-[1.5em]
+              text-button"
               onClick={() => router.push("/about")}
             >
               Learn More
@@ -69,7 +84,7 @@ export default function AboutSection({}: // aboutRef,
         {/* </div> */}
       </motion.div>
       <motion.div
-        className="col-span-1 row-span-1 flex justify-center items-center p-5"
+        className="flex justify-center items-end mt-[2em] lg:mt-0"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -79,7 +94,14 @@ export default function AboutSection({}: // aboutRef,
       >
         <img
           src="./aboutSection.svg"
-          className=" filter grayscale hover:blur-0 hover:grayscale-0 transition-all ease duration-500  h-full w-full lg:w-full lg:h-[60%]"
+          className="
+            rounded-full
+            filter grayscale hover:grayscale-0 hover:blur-0
+            transition-all duration-500
+
+            w-[10em] sm:w-[12em] md:w-[14em] lg:w-[16em] xl:w-[24em]
+            h-[10em] sm:h-[12em] md:h-[14em] lg:h-[16em] xl:h-[24em]
+           "
         />
       </motion.div>
     </div>

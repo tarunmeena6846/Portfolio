@@ -3,12 +3,13 @@ import Link from "next/link";
 import { MagneticButtons } from "../MagneticButtons";
 import Curve from "./Curve";
 import { menuSlide, slide } from "./anim";
+import { usePathname } from "next/navigation";
 export function Nav() {
+  const pathname = usePathname();
   const routes = [
     { route: "/", name: "Home" },
     { route: "/about", name: "About" },
     { route: "/projects", name: "Projects" },
-    // { route: "/", name: "Home" },
   ];
 
   return (
@@ -23,7 +24,7 @@ export function Nav() {
       <div className="flex justify-center w-full mt-[80px] mb-[40px] border-b border-black p-10">
         <h1 className="uppercase">Navigation</h1>
       </div>
-      {routes.map((route, index) => (
+      {routes.filter(items => items.route !== pathname).map((route, index) => (
         <motion.div
           key={index}
           className="relative flex items-center space-y-5 ml-10"

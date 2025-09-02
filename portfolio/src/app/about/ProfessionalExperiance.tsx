@@ -49,9 +49,9 @@ export default function ProfessionalExperience() {
     {
       year: "Nov 2024 - Present",
       company: "Rebet Inc.",
-      role: "Next.js Developer | Full-time",
+      role: "Web Developer | Full-time",
       description:
-        "Collaborated on the development of Rebet’s high-traffic sports betting platform using Next.js, Redux, and Material- UI, supporting a user base of over 200K users.",
+        "Collaborated on the development of Rebet’s high-traffic sports betting platform using Next.js, Redux, and Material- UI, supporting a user base of over 400K users.",
       technologies: [
         "Next.js",
         "React.js",
@@ -117,13 +117,13 @@ export default function ProfessionalExperience() {
         <h1 className="text-4xl text-transparent bg-white sm:text-6xl md:text-6xl bg-clip-text">
           Professional Experience
         </h1>
-        <Hr />
+        <Hr myProjectSection={false} />
       </motion.div>
 
       {/* Job Cards */}
       <motion.div
-        // className="relative  after:absolute after:inset-y-2 after:w-1 after:bg-white after:left-[-4px] md:after:left-1 lg:after:left-2 xl:after:left-3 grid gap-8 gap-12 pl-16 px-8 text-white ml-10"
-        className="space-y-10 mt-10"
+        className="relative  after:absolute after:inset-y-2 after:w-1 after:bg-white after:left-[-4px] md:after:left-1 lg:after:left-2 xl:after:left-3 grid gap-8 gap-12 pl-16 px-8 text-white ml-10"
+        // className="space-y-10 mt-10"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{

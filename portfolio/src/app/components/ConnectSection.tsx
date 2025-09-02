@@ -9,10 +9,10 @@ import { RefObject, useState } from "react";
 import ContactForm from "./ContactForm";
 // import ContactForm from "@/src/components/ui/form";
 
-export default function ConnectSection({}: // connectRef,
-{
-  // connectRef: RefObject<HTMLDivElement>;
-}) {
+export default function ConnectSection({ }: // connectRef,
+  {
+    // connectRef: RefObject<HTMLDivElement>;
+  }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -22,9 +22,13 @@ export default function ConnectSection({}: // connectRef,
 
   // };
   return (
-    <div className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1  m-10">
+    <div className=" flex flex-col md:flex-row
+    items-center justify-center
+    w-full h-full p-8
+    gap-[16px] lg:gap-[16px] 2xl:gap-[32px]">
       <motion.div
-        className="col-span-1 row-span-1 lg:col-span-2   p-5 md:px-20 space-y-5 lg:space-y-10 flex flex-col justify-center md:ml-10"
+        // className="col-span-1 row-span-1 lg:col-span-2   p-5 md:px-20 space-y-5 lg:space-y-10 flex flex-col justify-center md:ml-10"
+        className="flex flex-col justify-center gap-[8px] lg:gap-[16px] 2xl:gap-[32px] items-start"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -41,7 +45,7 @@ export default function ConnectSection({}: // connectRef,
           }}
         >
           Let's Connect
-          <Hr />
+          <Hr myProjectSection={false} />
         </motion.h3>
         <motion.p
           className=" text-zinc-200 lg:text-xl animate-fade-up"
@@ -136,7 +140,8 @@ export default function ConnectSection({}: // connectRef,
         </motion.div>
       </motion.div>
       <motion.div
-        className="flex flex-col justify-center md:px-20 lg:px-0 md:mt-10 pb-10"
+        // className="flex flex-col justify-center md:px-20 lg:px-0 md:mt-10 pb-10"
+        className="flex justify-center items-end mt-[2em] lg:mt-0 w-full md:min-w-[40%]"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{

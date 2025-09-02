@@ -14,6 +14,7 @@ const languagesFrameworks = [
   "SQL",
   "MongoDB",
   "Recoil",
+  "Redux",
   "AWS",
   "Kafka",
   "Protobuf",
@@ -27,6 +28,9 @@ const tools = [
   "Docker",
   "Jira",
   "Valgrind",
+  "Postman",
+  "Figma",
+  "Jira",
 ];
 export default function TechStackSection() {
   return (

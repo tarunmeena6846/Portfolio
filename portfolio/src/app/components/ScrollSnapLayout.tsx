@@ -23,8 +23,8 @@ export default function ScrollSnapLayout({
   }, []);
 
   return (
-    <div className="scroll-snap-container">
-      <div className="scroll-snap-sections">{children}</div>
+    <div className="scroll-snap-container no-scrollbar">
+      <div className="scroll-snap-sections no-scrollbar">{children}</div>
     </div>
   );
 }

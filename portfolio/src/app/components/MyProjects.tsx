@@ -6,15 +6,20 @@ import Hr from "./Hr";
 import { MagneticButtons } from "./MagneticButtons";
 import { RefObject } from "react";
 
-export default function MyProjects({}: // projectRef,
-{
-  // projectRef: RefObject<HTMLDivElement>;
-}) {
+export default function MyProjects({ }: // projectRef,
+  {
+    // projectRef: RefObject<HTMLDivElement>;
+  }) {
   const router = useRouter();
   return (
-    <div className=" grid grid-cols-1 grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 h-screen">
+    <div className="
+    flex flex-col md:flex-row
+    items-center justify-center
+    w-full h-full
+    gap-[16px] lg:gap-[16px] 2xl:gap-[32px]
+  ">
       <motion.div
-        className="col-span-1 order-2 flex justify-center items-center p-5"
+        className="flex justify-center items-end mt-[2em] lg:mt-0"
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -24,11 +29,17 @@ export default function MyProjects({}: // projectRef,
       >
         <img
           src="./projects.svg"
-          className=" filter grayscale hover:blur-0 hover:grayscale-0 transition-all ease duration-500  h-full w-full lg:w-full lg:h-[60%]"
-        />
+          className="
+          rounded-full
+          filter grayscale hover:grayscale-0 hover:blur-0
+          transition-all duration-500
+
+          w-[10em] sm:w-[12em] md:w-[14em] lg:w-[16em] xl:w-[24em]
+          h-[10em] sm:h-[12em] md:h-[14em] lg:h-[16em] xl:h-[24em]
+         "        />
       </motion.div>
       <motion.div
-        className="col-span-1 row-span-1 lg:col-span-2   p-10 md:px-20 space-y-5 lg:space-y-10 flex flex-col justify-center md:ml-10"
+        className="min-w-[90%] md:min-w-[55%] flex flex-col justify-center gap-[8px] lg:gap-[16px] 2xl:gap-[32px] items-end"
         initial={{ x: -100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -36,8 +47,11 @@ export default function MyProjects({}: // projectRef,
         }}
       >
         <motion.h1
-          className="text-4xl  md:text-3xl lg:text-7xl text-transparent bg-white cursor-default  bg-clip-text text-gray-400"
-          initial={{ x: -100, opacity: 0 }}
+          className="
+  text-xl
+  text-transparent bg-clip-text
+  bg-gradient-to-r from-gray-300 to-white
+"          initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
             delay: 0.3,
@@ -45,10 +59,11 @@ export default function MyProjects({}: // projectRef,
           }}
         >
           My Projects
-          <Hr />
+          <Hr myProjectSection={true} />
         </motion.h1>
         <motion.p
-          className="text-zinc-200 lg:text-xl"
+          className="text-base
+ text-gray-200"
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{
@@ -69,7 +84,11 @@ export default function MyProjects({}: // projectRef,
         >
           <MagneticButtons>
             <Button
-              className="bg-white text-black hover:bg-red-700 hover:text-white lg:p-6 rounded-3xl  lg:text-lg"
+              className="  bg-white text-black
+ hover:bg-red-700 hover:text-white
+ px-[1em] py-[0.75em]
+ rounded-[1.5em]
+ text-button"
               onClick={() => router.push("/projects")}
             >
               Learn More
